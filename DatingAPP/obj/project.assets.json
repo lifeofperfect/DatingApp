@@ -2,6 +2,15 @@
   "version": 3,
   "targets": {
     "net5.0": {
+      "Humanizer.Core/2.8.26": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/_._": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Humanizer.dll": {}
+        }
+      },
       "Microsoft.Data.Sqlite.Core/6.0.0-preview.1.21102.2": {
         "type": "package",
         "dependencies": {
@@ -51,6 +60,22 @@
           "lib/netstandard2.0/_._": {}
         }
       },
+      "Microsoft.EntityFrameworkCore.Design/6.0.0-preview.1.21102.2": {
+        "type": "package",
+        "dependencies": {
+          "Humanizer.Core": "2.8.26",
+          "Microsoft.EntityFrameworkCore.Relational": "6.0.0-preview.1.21102.2"
+        },
+        "compile": {
+          "lib/net5.0/_._": {}
+        },
+        "runtime": {
+          "lib/net5.0/Microsoft.EntityFrameworkCore.Design.dll": {}
+        },
+        "build": {
+          "build/net5.0/Microsoft.EntityFrameworkCore.Design.props": {}
+        }
+      },
       "Microsoft.EntityFrameworkCore.Relational/6.0.0-preview.1.21102.2": {
         "type": "package",
         "dependencies": {
@@ -89,6 +114,18 @@
         },
         "runtime": {
           "lib/net5.0/Microsoft.EntityFrameworkCore.Sqlite.dll": {}
+        }
+      },
+      "Microsoft.EntityFrameworkCore.Tools/6.0.0-preview.1.21102.2": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore.Design": "6.0.0-preview.1.21102.2"
+        },
+        "compile": {
+          "lib/net5.0/_._": {}
+        },
+        "runtime": {
+          "lib/net5.0/_._": {}
         }
       },
       "Microsoft.Extensions.ApiDescription.Server/3.0.0": {
@@ -461,6 +498,22 @@
     }
   },
   "libraries": {
+    "Humanizer.Core/2.8.26": {
+      "sha512": "OiKusGL20vby4uDEswj2IgkdchC1yQ6rwbIkZDVBPIR6al2b7n3pC91elBul9q33KaBgRKhbZH3+2Ur4fnWx2A==",
+      "type": "package",
+      "path": "humanizer.core/2.8.26",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "humanizer.core.2.8.26.nupkg.sha512",
+        "humanizer.core.nuspec",
+        "lib/netstandard1.0/Humanizer.dll",
+        "lib/netstandard1.0/Humanizer.xml",
+        "lib/netstandard2.0/Humanizer.dll",
+        "lib/netstandard2.0/Humanizer.xml",
+        "logo.png"
+      ]
+    },
     "Microsoft.Data.Sqlite.Core/6.0.0-preview.1.21102.2": {
       "sha512": "2Z+9/Z8LdX+kue57q5nWH0/gzLGBZFY0mZQAU8STQ2KoVoOWNCTDttchePZ1WmvDTatTxC40D5k7EtdVgBZgvQ==",
       "type": "package",
@@ -519,6 +572,21 @@
         "microsoft.entityframeworkcore.analyzers.nuspec"
       ]
     },
+    "Microsoft.EntityFrameworkCore.Design/6.0.0-preview.1.21102.2": {
+      "sha512": "nncEa+o2dy1f3QryxDG8EuDerZc24//tteUmcgEIEQY1ZQp/Jp2UqPZDTYEaTX+ZEIN386kZkMtpHyN0A3VTdA==",
+      "type": "package",
+      "path": "microsoft.entityframeworkcore.design/6.0.0-preview.1.21102.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "build/net5.0/Microsoft.EntityFrameworkCore.Design.props",
+        "lib/net5.0/Microsoft.EntityFrameworkCore.Design.dll",
+        "lib/net5.0/Microsoft.EntityFrameworkCore.Design.xml",
+        "microsoft.entityframeworkcore.design.6.0.0-preview.1.21102.2.nupkg.sha512",
+        "microsoft.entityframeworkcore.design.nuspec"
+      ]
+    },
     "Microsoft.EntityFrameworkCore.Relational/6.0.0-preview.1.21102.2": {
       "sha512": "3+bwVCACMIvue3PILn3ZSu3jV5niIIVf/DgHtbXEFRMU1M+KE9XKPCQa5UGFLX1tU+UemztEjMzu2oZxsPv+Ew==",
       "type": "package",
@@ -558,6 +626,30 @@
         "lib/net5.0/Microsoft.EntityFrameworkCore.Sqlite.xml",
         "microsoft.entityframeworkcore.sqlite.core.6.0.0-preview.1.21102.2.nupkg.sha512",
         "microsoft.entityframeworkcore.sqlite.core.nuspec"
+      ]
+    },
+    "Microsoft.EntityFrameworkCore.Tools/6.0.0-preview.1.21102.2": {
+      "sha512": "PqbLBKjYjGT7eowRvsuSP4BIu7Z2KG/mt/ZJLZOK3ffmybyCIBac54az6uVku3ukBFS5L3+pGSNAgjVyf1pomA==",
+      "type": "package",
+      "path": "microsoft.entityframeworkcore.tools/6.0.0-preview.1.21102.2",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "lib/net5.0/_._",
+        "microsoft.entityframeworkcore.tools.6.0.0-preview.1.21102.2.nupkg.sha512",
+        "microsoft.entityframeworkcore.tools.nuspec",
+        "tools/EntityFrameworkCore.PS2.psd1",
+        "tools/EntityFrameworkCore.PS2.psm1",
+        "tools/EntityFrameworkCore.psd1",
+        "tools/EntityFrameworkCore.psm1",
+        "tools/about_EntityFrameworkCore.help.txt",
+        "tools/init.ps1",
+        "tools/net461/any/ef.exe",
+        "tools/net461/win-x86/ef.exe",
+        "tools/netcoreapp2.0/any/ef.dll",
+        "tools/netcoreapp2.0/any/ef.runtimeconfig.json"
       ]
     },
     "Microsoft.Extensions.ApiDescription.Server/3.0.0": {
@@ -1172,28 +1264,30 @@
   },
   "projectFileDependencyGroups": {
     "net5.0": [
+      "Microsoft.EntityFrameworkCore >= 6.0.0-preview.1.21102.2",
       "Microsoft.EntityFrameworkCore.Sqlite >= 6.0.0-preview.1.21102.2",
+      "Microsoft.EntityFrameworkCore.Tools >= 6.0.0-preview.1.21102.2",
       "Swashbuckle.AspNetCore >= 5.6.3"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\ASUS\\.nuget\\packages\\": {},
+    "C:\\Users\\Stanbic\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ASUS\\Documents\\2021\\DatingAPP.API\\DatingAPP\\DatingAPP.csproj",
+      "projectUniqueName": "C:\\Users\\Stanbic\\Documents\\2021\\DatingApp\\Api\\DatingApp\\DatingAPP\\DatingAPP.csproj",
       "projectName": "DatingAPP",
-      "projectPath": "C:\\Users\\ASUS\\Documents\\2021\\DatingAPP.API\\DatingAPP\\DatingAPP.csproj",
-      "packagesPath": "C:\\Users\\ASUS\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ASUS\\Documents\\2021\\DatingAPP.API\\DatingAPP\\obj\\",
+      "projectPath": "C:\\Users\\Stanbic\\Documents\\2021\\DatingApp\\Api\\DatingApp\\DatingAPP\\DatingAPP.csproj",
+      "packagesPath": "C:\\Users\\Stanbic\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Stanbic\\Documents\\2021\\DatingApp\\Api\\DatingApp\\DatingAPP\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\ASUS\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Stanbic\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -1201,7 +1295,8 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "https://api.nuget.org/v3/index.json": {}
+        "https://api.nuget.org/v3/index.json": {},
+        "https://pkgs.dev.azure.com/stanbicibtcdev/_packaging/com.stanbicibtc.dotnet.feed%40Local/nuget/v3/index.json": {}
       },
       "frameworks": {
         "net5.0": {
@@ -1219,7 +1314,17 @@
       "net5.0": {
         "targetAlias": "net5.0",
         "dependencies": {
+          "Microsoft.EntityFrameworkCore": {
+            "target": "Package",
+            "version": "[6.0.0-preview.1.21102.2, )"
+          },
           "Microsoft.EntityFrameworkCore.Sqlite": {
+            "target": "Package",
+            "version": "[6.0.0-preview.1.21102.2, )"
+          },
+          "Microsoft.EntityFrameworkCore.Tools": {
+            "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+            "suppressParent": "All",
             "target": "Package",
             "version": "[6.0.0-preview.1.21102.2, )"
           },
