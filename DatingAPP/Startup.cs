@@ -34,7 +34,7 @@ namespace DatingAPP
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "DatingAPP", Version = "v1" });
             });
-            services.AddDbContext<DataContext>(opt => opt.UseSqlite(Configuration.GetConnectionString("DefaultConnection")));
+            services.AddDbContext<DataContext>(opt => opt.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
