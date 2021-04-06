@@ -1,4 +1,5 @@
 ﻿using API.Data;
+using API.DTOs;
 using API.Entities;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -40,6 +41,26 @@ namespace API.Controllers
             await _context.SaveChangesAsync();
 
             return user;
+        }
+
+        [HttpPost("login")]
+        public async Task<ActionResult<AppUser>> Login(LoginDto request)
+        {
+            var user = await _context.Users.SingleAsync(x => x.UserName == request.UserName);
+
+            if (user == null) return Unauthorized("User name is invalid");
+
+            var hmac = new HMACSHA512(user.PasswordSalt);
+
+            var hashedPassword = hmac.ComputeHash(Encoding.UTF8.GetBytes(request.Password));
+
+            for(int i=0; i<hashedPassword.Length; i++)
+            {
+                if (hashedPassword[i] != user.PasswordHash[i]) return Unauthorized("password is invalid");
+            }
+
+            return user;
+
         }
 
         private async Task<bool> UserExist(string username)
