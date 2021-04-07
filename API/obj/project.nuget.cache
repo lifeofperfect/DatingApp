@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "gO2FcKDaE5i7RgKTY7F4Wqzakr+HAc2XEFArUkFXDK5x7p35QKV6xXRondz/B81EpWRNpuGh9k4UzOt5uGBmLQ==",
+  "dgSpecHash": "ukkl6d6FkeaGkWhhK1EPUc18rtG6eYlYLvlJXfzmRN+5RALpElKwQaXNI7BiO5g4WpvFRS+YLNW5UOajLHrV2g==",
   "success": true,
   "projectFilePath": "C:\\Users\\ASUS\\Dropbox\\My PC (DESKTOP-KDLEN81)\\Desktop\\AprilDev\\datingApp\\API\\API.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\ASUS\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\3.1.14\\microsoft.aspnetcore.authentication.jwtbearer.3.1.14.nupkg.sha512",
     "C:\\Users\\ASUS\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\ASUS\\.nuget\\packages\\microsoft.bcl.hashcode\\1.1.0\\microsoft.bcl.hashcode.1.1.0.nupkg.sha512",
     "C:\\Users\\ASUS\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",

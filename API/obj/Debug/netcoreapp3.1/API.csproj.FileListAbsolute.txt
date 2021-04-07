@@ -64,3 +64,4 @@ C:\Users\ASUS\Dropbox\My PC (DESKTOP-KDLEN81)\Desktop\AprilDev\datingApp\API\obj
 C:\Users\ASUS\Dropbox\My PC (DESKTOP-KDLEN81)\Desktop\AprilDev\datingApp\API\obj\Debug\netcoreapp3.1\API.dll
 C:\Users\ASUS\Dropbox\My PC (DESKTOP-KDLEN81)\Desktop\AprilDev\datingApp\API\obj\Debug\netcoreapp3.1\API.pdb
 C:\Users\ASUS\Dropbox\My PC (DESKTOP-KDLEN81)\Desktop\AprilDev\datingApp\API\obj\Debug\netcoreapp3.1\API.genruntimeconfig.cache
+C:\Users\ASUS\Dropbox\My PC (DESKTOP-KDLEN81)\Desktop\AprilDev\datingApp\API\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.JwtBearer.dll
